@@ -9,6 +9,7 @@ use Redirect;
 class StripeController extends Controller
 {
     public function stripe_data(Request $request){
+    	// dd($request->amount);
 
     	\Stripe\Stripe::setApiKey('sk_test_r0S5AOiKbCP7jizyiLUako01' );
 	try {
@@ -23,6 +24,8 @@ class StripeController extends Controller
 	} catch ( \Exception $e ) {
 		Session::flash ( 'fail-message', "Error! Please Try again." );
 		return Redirect::back ();
+		// $payment_done = true;
+		// return view('welcome',compact('payment_done'));
 	}
 
 

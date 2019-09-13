@@ -10,15 +10,31 @@
 </head>
 
 <body>
+
+
+<!-- 	@if(isset($payment_done))
+                 <div class="alert alert-success  " class="inputtext" class="form-control" role="alert">
+ -->                   <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+                   <<!-- strong>Your Pyment is Done Successful!</strong>&nbsp;
+                 </div>                            
+                @endif -->
+
+	
 	<div class="container">
-		<div class='row'>
+		<div class='row' style="margin-top: 50px;">
 			<div class='col-md-4'></div>
-			<div style="border: 1px solid black; background-color: blue;" class='col-md-4'>
+			<div style="border-radius: 20px; border: 1px solid grey; background-color: white;" class='col-md-4'>
 				<script src='https://js.stripe.com/v2/' type='text/javascript'></script>
-				<form  accept-charset="UTF-8" action="/" class="require-validation"
+
+
+				
+
+				<form style="margin-top: 10px;" accept-charset="UTF-8" action="/" class="require-validation"
 					data-cc-on-file="false"
 					data-stripe-publishable-key="pk_test_NPoXgJgkYzTB4QY5QvQUBtfm"
 					id="payment-form" method="post">
+
+
 					{{ csrf_field() }}
 					<div class='form-row'>
 						<div class='col-xs-12 form-group required'>
@@ -52,9 +68,10 @@
 					</div>
 					<div class='form-row'>
 						<div class='col-md-12'>
-							<div class='form-control total btn btn-info'>
-								Total: <span class='amount'>$300</span>
-							</div>
+							<!-- <div class='form-control total btn btn-info'> -->
+								<!-- Total: <span class='amount'>$300</span> -->
+								<input type="text" name="amount" class="form-control" size='4' placeholder="amount">
+							<!-- </div> -->
 						</div>
 					</div>
 					<div class='form-row'>
